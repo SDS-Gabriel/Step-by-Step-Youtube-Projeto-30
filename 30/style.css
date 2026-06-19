@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #043fa6; /* Cor azul vibrante do fundo do vídeo */
+  padding: 20px;
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  gap: 40px; /* Mantém o espaçamento uniforme entre os cards */
+}
+.container .box{
+  width: calc(33.3% - 40px);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+.container .box:hover{
+  transform: translateY(-5px); /* Efeito suave de levitação ao passar o mouse */
+}
+.box .image{
+  margin: 10px 0;
+  height: 150px;
+  width: 150px;
+  background: #043fa6;
+  padding: 3px;
+  border-radius: 50%;
+}
+.box .image img{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+.box .name_job{
+  margin: 10px 0 3px 0;
+  color: #043fa6;
+  font-size: 20px;
+  font-weight: 600;
+}
+.box .rating{
+  margin-bottom: 5px;
+}
+.box .rating i{
+  color: #FFD700;
+  margin: 0 2px;
+}
+.box p{
+  text-align: center;
+  color: #333;
+  font-size: 14px;
+  margin-top: 8px;
+}
+.box .btns{
+  margin-top: 20px;
+  margin-bottom: 5px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.box .btns button{
+  background: #043fa6;
+  width: 48%;
+  padding: 8px 0;
+  outline: none;
+  border: 2px solid #043fa6;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.box .btns button:hover{
+  background: none;
+  color: #043fa6;
+}
+
+/* Responsividade - Media Queries */
+@media (max-width: 1045px) {
+  .container .box{
+    width: calc(50% - 40px); /* Exibe em 2 colunas para telas médias */
+  }
+}
+@media (max-width: 710px) {
+  .container .box{
+    width: 100%; /* Empilha em 1 coluna para celulares */
+  }
+}
